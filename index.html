@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-button">Arithmetic</button>
+                <div class="accordion-content">
+                    <a href="#">Addition</a>
+                    <a href="#">Subtraction</a>
+                    <a href="#">Multiplication</a>
+                    <a href="#">Division</a>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-button">Pre-Algebra</button>
+                <div class="accordion-content">
+                    <a href="#">Fractions</a>
+                    <a href="#">Ratio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="score">⭐ 0</div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div class="question"></div>
+        <div class="options">
+            <button class="option"></button>
+            <button class="option"></button>
+            <button class="option"></button>
+            <button class="option"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    font-family: 'Comic Sans MS', sans-serif; /* Updated to a kid-friendly font */
+}
+
+.sidebar {
+    background: white; /* White background for the sidebar */
+    width: 220px; /* Increased width for icons */
+    height: 95vh; /* Adjusted height to show background */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute; /* Positioning the sidebar */
+    left: 20px; /* Moved towards the right */
+    top: 2.5vh; /* Centered vertically */
+    overflow-y: auto; /* Added scroll for overflow content */
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.accordion-button:hover {
+    background: #e0e0e0;
+}
+
+.accordion-button::before {
+    content: '▶';
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.accordion-button.active::before {
+    transform: rotate(90deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.accordion-content a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.accordion-content a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 70%; /* Adjusted width */
+    height: 80%; /* Adjusted height */
+    text-align: center;
+    margin-left: 260px; /* Space for the sidebar */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.home-icon {
+    font-size: 24px;
+}
+
+.score {
+    background: #ffcc00;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 20px; /* Adjusted height for better visibility */
+}
+
+.progress {
+    background: #4a90e2;
+    height: 100%;
+    width: 100%; /* Start with full width */
+    transition: width 1s linear; /* Smooth transition */
+}
+
+.question {
+    font-size: 48px; /* Significantly increased font size */
+    font-weight: bold;
+    margin-bottom: 30px; /* Added more space below the question */
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Increased gap between options */
+}
+
+.option {
+    background: none; /* No background by default */
+    border: none;
+    border-radius: 10px;
+    padding: 20px; /* Increased padding */
+    font-size: 24px; /* Increased font size */
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option:hover {
+    background: #e0e0e0;
+}
+
+.correct {
+    background-color: green !important; /* Ensure the background stays green */
+    color: white;
+}
+
+.wrong {
+    background-color: red;
+    color: white;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
